@@ -1,0 +1,16 @@
+{
+  "name": "api-scanner",
+  "version": "1.0.0",
+  "description": "FIL-only live trading scanner — MEXC futures API, long-only, demo account",
+  "main": "server_fil_api.js",
+  "scripts": {
+    "start": "node server_fil_api.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "express": "^4.18.2"
+  }
+}

@@ -66,7 +66,8 @@ async function mexcGet(endpoint, params = {}) {
 // ── PUBLIC KLINE PROXY (no auth) ──────────────────────────────────────────────
 app.get('/proxy/mexc/kline', async (req, res) => {
   try {
-    const r = await axios.get(`${MEXC_BASE}/api/v1/contract/kline/${FIL_SYM}`, {
+    const symbol = req.query.symbol || FIL_SYM;
+    const r = await axios.get(`${MEXC_BASE}/api/v1/contract/kline/${symbol}`, {
       params: { interval: req.query.interval || 'Min1', limit: req.query.limit || 25 },
       timeout: 10000,
     });
